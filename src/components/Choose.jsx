@@ -17,7 +17,7 @@ const Choose = () => {
     ];
 
     const createPromptText = () => {
-        let text = 'Generate breakfast using these ingredients: ' + gptPromptText.toString();
+        let text = 'Пenerate a cocktail: ' + gptPromptText.toString();
         console.log('prompt text: ', text);
         return text;
     };
