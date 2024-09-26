@@ -1,4 +1,4 @@
-import dish from '../../public/images/dish.png'
+import dish from '../../public/images/dish.png';
 
 const InfoBlock = () => {
     return (
@@ -17,6 +17,12 @@ const InfoBlock = () => {
                 <button className="px-3 h-[30px] text-white rounded-full hover:bg-gray-200 hover:text-black transition duration-300 ease-in-out">
                     Open
                 </button>
+
+                {/* Add the video element below the buttons */}
+                <video className="w-full lg:w-[800px] h-[450px] mt-5" autoPlay loop muted>
+                    <source src="/public/video/videoreclama.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
             </div>
             <div></div>
             <div></div>
