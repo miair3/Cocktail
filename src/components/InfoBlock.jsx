@@ -18,11 +18,13 @@ const InfoBlock = () => {
                     Open
                 </button>
 
-                {/* Add the video element below the buttons */}
-                <video className="w-full lg:w-[800px] h-[450px] mt-5" autoPlay loop muted>
-                    <source src="/public/video/videoreclama.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <div className="relative mt-5">
+                    {/* Add the video element below the buttons */}
+                    <video className="w-full lg:w-[800px] h-[450px]" autoPlay loop muted>
+                        <source src="/public/video/videoreclama.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
             <div></div>
             <div></div>
