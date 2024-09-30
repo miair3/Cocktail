@@ -5,12 +5,9 @@ const InfoBlock = () => {
         <div className="w-full h-screen flex flex-col lg:flex-row items-center justify-evenly bg-cover bg-center" 
              style={{ backgroundImage: `url(${dish})` }}> 
             <div className="p-8 lg:ml-5 lg:mr-auto"> {/* Меняем местами lg:ml-auto и lg:mr-5 */}
-                <h1 className="text-3xl font-bold text-white"> 
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aspernatur.{" "}
+                <h1 className="text-3xl font-bold text-white "> 
+                Making cocktails for a special life.{" "}
                 </h1>
-                <p className="text-white"> 
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis quisquam aut veniam, sed animi perferendis.
-                </p>
                 <button className="px-3 h-[30px] text-white rounded-full hover:bg-gray-200 hover:text-black transition duration-300 ease-in-out">
                     Off
                 </button>
@@ -21,7 +18,7 @@ const InfoBlock = () => {
                 <div className="relative mt-5">
                     {/* Add the video element below the buttons */}
                     <video className="w-full lg:w-[800px] h-[450px]" autoPlay loop muted>
-                        <source src="/public/video/videoreclama.mp4" type="video/mp4" />
+                        <source src="/video/videoreclama.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
