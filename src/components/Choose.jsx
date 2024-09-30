@@ -42,10 +42,7 @@ const Choose = () => {
         };
 
         try {
-            const response = await fetch(
-                "https://api.openai.com/v1/images/generations",
-                options
-            );
+            const response = await fetch("https://api.openai.com/v1/images/generations",options);
             const data = await response.json();
             console.log('data: ', data);
             setImageUrl(data.data[0].url);
