@@ -3,7 +3,7 @@ import dish from "../../public/images/dish.png";
 const InfoBlock = () => {
   return (
     <div
-      className="w-full h-screen flex flex-col lg:flex-row items-center justify-evenly bg-cover bg-center"
+      className="w-full h-screen caveat flex flex-col lg:flex-row items-center justify-evenly bg-cover bg-center"
       style={{ backgroundImage: `url(${dish})` }}
     >
       {" "}

@@ -10,6 +10,8 @@ const Choose = () => {
   const [gptPromptText, setGptPromptText] = useState([]);
   const [generatedText, setGeneratedText] = useState('');
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const ingredientsData = [
     { name: "Apple", imageSrc: "/images/apple.png" },
     { name: "Banana", imageSrc: "/images/banana.png" },
@@ -47,13 +49,14 @@ const Choose = () => {
         console.log('data: ', data);
         setGeneratedText(data.choices[0].text);
 
-       
+        setIsLoading(false);
     }catch(error){
         console.error(error);
     }
 }
 
   const generateImage = async (promptText) => {
+    setIsLoading(true)
     console.log("generate image");
     const options = {
       method: "POST",
@@ -110,15 +113,18 @@ const Choose = () => {
         </div>
         <button
           onClick={() => generateImage(createPromptText())}
-          className="px-4 h-[50px] m-4 rounded-2xl bg-indigo-400"
+          className="px-4 h-[50px] m-4 rounded-full bg-slate-900 text-white"
+          disabled = {isLoading}
         >
-          Generate Dish
+
+           {isLoading ? <div>Loading ... </div> : <div>Generate Dish</div>}
+
         </button>
       </div>
       {imageUrl && (
         <img src={imageUrl} width={400} height={400} alt="generated dish" />
       )}
-      <p className="text-white text-xl">infoFromOptions: {infoFromOptions}</p>
+      
       <Options setInfoFromOptions={setInfoFromOptions} />
       <div className="text-white">generated text: {generatedText}</div>
     </div>

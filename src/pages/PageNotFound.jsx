@@ -1,6 +1,6 @@
 const PageNotFound = () => {
     return (
-        <div className="w-full h-40 bg-purple-400">
+        <div className="w-full h-40 bg-purple-400" caveat>
             PageNotFound;
         </div>
     )

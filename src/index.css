@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family:"Caveat-Medium";
+ src: url("/fonts/static/Caveat-Medium.ttf") format("truetype");
+ font-weight: normal;
+ font-style: normal;
+}
 
 body{
   width: 100%;
@@ -11,6 +17,9 @@ body{
   margin: 0
 }
 
+.caveat{
+  font-family: 'Caveat-Medium';
+}
 
 .navbar{
   width: 100%;
