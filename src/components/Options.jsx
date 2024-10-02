@@ -41,9 +41,9 @@ const Options = ({ setInfoFromOptions }) => {
               onChange={(e) => setTypeofcocktail(e.target.value)}
               className="w-[200px] h-[35px] rounded-3xl text-black border-black  border-2"
             >
-              <option value="milky">молочный</option>
-              <option value="Shicolade">шиколадный</option>
-              <option value="Kazakh">казахский</option>
+              <option value="milky">Milky</option>
+              <option value="Chocolate">Chocolate</option>
+              <option value="Caramel">Caramel</option>
             </select>
           </div>
 

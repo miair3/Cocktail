@@ -8,7 +8,7 @@ const Footer = () => {
             <p className="text-gray-400">
               Address: 123 Main Street, City, State Zip
               <br />
-              Email: info@example.com
+              Email: gargabayuliberdimurat@gmail.com
               <br />
               Phone: (123) 456-7890
             </p>
@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 text-center text-gray-400">
-          <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+          <p>&copy; 2024 MIAIR3.</p>
         </div>
       </div>
     </footer>

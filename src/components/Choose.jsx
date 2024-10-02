@@ -17,6 +17,9 @@ const Choose = () => {
     { name: "Banana", imageSrc: "/images/banana.png" },
     { name: "Avocado", imageSrc: "/images/avocado.png" },
     { name: "Strawberry", imageSrc: "/images/strawberry.png" },
+    { name: "watermelon", imageSrc: "/images/watermelon.png" },
+    { name: "cherry", imageSrc: "/images/cherry.png" },
+    { name: "grape", imageSrc: "/images/grape.png" },
   ];
 
   const createPromptText = () => {
