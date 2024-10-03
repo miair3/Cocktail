@@ -1,22 +1,25 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"; // Импортируем необходимые хуки из React
 
 const Options = ({ setInfoFromOptions }) => {
-  const [typeofcocktail, setTypeofcocktail] = useState("");
-  const [yourchiefabilities, setYourchiefabilities] = useState("");
-  const [sizeofacup, setSizeofacup] = useState("");
-  const [temperature, setTemperature] = useState("");
-  const [addextraingredients, setAddextraingredients] = useState("");
-  const [baningredients, setBaningredients] = useState("");
+  // Определяем состояния для различных параметров коктейля
+  const [typeofcocktail, setTypeofcocktail] = useState(""); // Тип коктейля
+  const [yourchiefabilities, setYourchiefabilities] = useState(""); // Уровень навыков повара
+  const [sizeofacup, setSizeofacup] = useState(""); // Размер чашки
+  const [temperature, setTemperature] = useState(""); // Температура коктейля
+  const [addextraingredients, setAddextraingredients] = useState(""); // Дополнительные ингредиенты
+  const [baningredients, setBaningredients] = useState(""); // Запрещенные ингредиенты
 
+  // Функция для отправки информации о выбранных параметрах
   const sendInfoOptions = () => {
-    console.log("clicked");
+    console.log("clicked"); // Лог для отладки
     setInfoFromOptions(
       `Type of cocktail: ${typeofcocktail}, Chief abilities: ${yourchiefabilities}, Size of a cup: ${sizeofacup}, Temperature: ${temperature}, Extra ingredients: ${addextraingredients}, Ban ingredients: ${baningredients}`
     );
   };
 
+  // Эффект, который вызывается при изменении любого из состояний
   useEffect(() => {
-    sendInfoOptions();
+    sendInfoOptions(); // Отправляем информацию о параметрах
   }, [
     typeofcocktail,
     yourchiefabilities,
@@ -28,18 +31,19 @@ const Options = ({ setInfoFromOptions }) => {
 
   return (
     <div className="mx-auto p-4 mt-4 bg-black bg-opacity-75 w-[70%] h-[400px] rounded-3xl flex flex-col items-center text-white">
-      <div className="text-3xl font-bold">Options</div>
-      <p>Lorem, ipsum dolor.</p>
+      {/* Основной контейнер для опций с фоном и закругленными углами */}
+      <div className="text-3xl font-bold">Options</div> {/* Заголовок секции */}
+      <p>Lorem, ipsum dolor.</p> {/* Вспомогательный текст */}
 
-      <div className="flex gap-10 mt-10">
+      <div className="flex gap-10 mt-10"> {/* Контейнер для выбора параметров */}
         <div>
           <div className="flex flex-col">
-            <label>Type of cocktail</label>
+            <label>Type of cocktail</label> {/* Метка для выбора типа коктейля */}
             <select
               name="dish"
               id="dish"
-              onChange={(e) => setTypeofcocktail(e.target.value)}
-              className="w-[200px] h-[35px] rounded-3xl text-black border-black  border-2"
+              onChange={(e) => setTypeofcocktail(e.target.value)} // Обработка изменения типа коктейля
+              className="w-[200px] h-[35px] rounded-3xl text-black border-black border-2"
             >
               <option value="milky">Milky</option>
               <option value="Chocolate">Chocolate</option>
@@ -48,11 +52,11 @@ const Options = ({ setInfoFromOptions }) => {
           </div>
 
           <div className="flex flex-col">
-            <label>Your chief abilities</label>
+            <label>Your chief abilities</label> {/* Метка для выбора навыков повара */}
             <select
               name="cuisine"
               id="cuisine"
-              onChange={(e) => setYourchiefabilities(e.target.value)}
+              onChange={(e) => setYourchiefabilities(e.target.value)} // Обработка изменения навыков
               className="w-[200px] h-[35px] rounded-3xl text-black border-black border-2"
             >
               <option value="novice">Novice</option>
@@ -63,9 +67,9 @@ const Options = ({ setInfoFromOptions }) => {
         </div>
         <div>
           <div>
-            <p>Size of a cup</p>
+            <p>Size of a cup</p> {/* Заголовок для выбора размера чашки */}
             <select
-              onChange={(e) => setSizeofacup(e.target.value)}
+              onChange={(e) => setSizeofacup(e.target.value)} // Обработка изменения размера чашки
               className="w-[200px] h-[35px] rounded-3xl text-black border-black border-2"
             >
               <option value="small">S size</option>
@@ -75,9 +79,9 @@ const Options = ({ setInfoFromOptions }) => {
           </div>
 
           <div>
-            <p>Temperature</p>
+            <p>Temperature</p> {/* Заголовок для выбора температуры */}
             <select
-              onChange={(e) => setTemperature(e.target.value)}
+              onChange={(e) => setTemperature(e.target.value)} // Обработка изменения температуры
               className="w-[200px] h-[35px] rounded-3xl text-black border-black border-2"
             >
               <option value="+100 C">+100 C</option>
@@ -88,18 +92,18 @@ const Options = ({ setInfoFromOptions }) => {
         </div>
         <div>
           <div>
-            <p>Add extra ingredients</p>
+            <p>Add extra ingredients</p> {/* Заголовок для дополнительных ингредиентов */}
             <input
-              onChange={(e) => setAddextraingredients(e.target.value)}
+              onChange={(e) => setAddextraingredients(e.target.value)} // Обработка ввода дополнительных ингредиентов
               placeholder="extra ingredients"
               className="w-[200px] h-[35px] rounded-3xl border-2 text-black border-black "
             />
           </div>
 
           <div>
-            <p>Ban ingredients</p>
+            <p>Ban ingredients</p> {/* Заголовок для запрещенных ингредиентов */}
             <input
-              onChange={(e) => setBaningredients(e.target.value)}
+              onChange={(e) => setBaningredients(e.target.value)} // Обработка ввода запрещенных ингредиентов
               placeholder="ban ingredient"
               className="w-[200px] h-[35px] rounded-3xl border-2 text-black border-black "
             />
@@ -107,6 +111,7 @@ const Options = ({ setInfoFromOptions }) => {
         </div>
       </div>
 
+      {/* Отображение выбранных параметров */}
       <p>Selected type of cocktail: {typeofcocktail}</p>
       <p>Selected your chief abilities: {yourchiefabilities}</p>
       <p>Selected size of cup: {sizeofacup}</p>
@@ -117,4 +122,4 @@ const Options = ({ setInfoFromOptions }) => {
   );
 };
 
-export default Options;
+export default Options; // Экспортируем компонент Options
